@@ -6,7 +6,7 @@ auth.authenticate_user() from google.auth import default creds, _ = default() gc
 
 spreadsheet = gc.open('Evo') worksheet = spreadsheet.worksheet('Folha1')
 
-values = worksheeet.get_all_values()
+values = worksheet.get_all_values()
 
 df = pd.DataFrame(values[1:], columns=values[0])
 
